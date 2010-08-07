@@ -3,7 +3,7 @@ require 'test_helper'
 module CollectiveIdea
   module Acts #:nodoc:
     module NestedSet #:nodoc:
-      class AwesomeNestedSetTest < TestCaseClass
+      class AwesomeNestedSetTest < ActiveSupport::TestCase
         include Helper
         fixtures :categories
         

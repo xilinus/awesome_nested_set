@@ -9,7 +9,7 @@ end
 require 'rake/testtask'
 require 'rake/rdoctask'
 require 'rcov/rcovtask'
-require "load_multi_rails_rake_tasks" 
+#require "load_multi_rails_rake_tasks" 
 
 Jeweler::Tasks.new do |s|
   s.name = "awesome_nested_set"

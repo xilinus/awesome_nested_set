@@ -10,4 +10,4 @@ module CollectiveIdea
   end
 end
 
-require 'awesome_nested_set/railtie' if defined?(Rails)
+require 'awesome_nested_set/railtie'

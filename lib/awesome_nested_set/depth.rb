@@ -6,24 +6,24 @@ module CollectiveIdea #:nodoc:
         # Model scope conditions
         def scope_condition(table_name=nil)
           table_name ||= self.class.quoted_table_name
-          
+
           scope_string = Array(acts_as_nested_set_options[:scope]).map do |c|
             "#{table_name}.#{connection.quote_column_name(c)} = #{self.send(c)}"
           end.join(" AND ")
-          
+
           scope_string.blank? ? "1 = 1" : scope_string
         end
-        
+
         # Check is model has depth column
         def depth?
           self.respond_to?(:depth)
         end
-        
+
         # Update cached_level attribute
         def update_depth
           self.update_attribute(:depth, level)
         end
-        
+
         # Update cached_level attribute for all record tree
         def update_all_depth
           if depth?

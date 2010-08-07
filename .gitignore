@@ -3,3 +3,4 @@ test/debug.log
 rdoc
 coverage
 pkg
+*.sw?
