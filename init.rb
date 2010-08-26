@@ -1,2 +1,2 @@
 # encoding: utf-8
-require 'awesome_nested_set'
+require File.join(File.dirname(__FILE__), "lib", "awesome_nested_set")
