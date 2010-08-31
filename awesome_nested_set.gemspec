@@ -4,12 +4,12 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{awesome_nested_set}
+  s.name = %q{moretea-awesome_nested_set}
   s.version = "1.4.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Brandon Keepers", "Daniel Morrison"]
-  s.date = %q{2009-10-07}
+  s.date = %q{2010-8-31}
   s.description = %q{An awesome nested set implementation for Active Record}
   s.email = %q{info@collectiveidea.com}
   s.extra_rdoc_files = [
