@@ -255,7 +255,11 @@ module CollectiveIdea #:nodoc:
           end
 
           def quoted_left_column_name
-            connection.quote_column_name(left_column_name)
+            if connected?
+              connection.quote_column_name(left_column_name)
+            else
+              left_column_name
+            end
           end
 
           def quoted_right_column_name
