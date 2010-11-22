@@ -255,12 +255,12 @@ module CollectiveIdea #:nodoc:
           end
 
           def quoted_left_column_name
-            if connected?
+            if ( self.is_a?(Class) && self.base_class.connected? ) || ( self.kind_of?(ActiveRecord::Base) && self.class.connected? )
               connection.quote_column_name(left_column_name)
             else
               left_column_name
             end
-          end
+         end
 
           def quoted_right_column_name
             connection.quote_column_name(right_column_name)
